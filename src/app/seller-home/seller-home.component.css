@@ -1,0 +1,26 @@
+h1{
+    padding-top: 10px;
+    color: blueviolet;
+    font-size: xx-large;
+  }
+
+table{
+    text-align: left;
+    color: blueviolet;
+    border-collapse: collapse;
+}
+
+table th, table td{
+    border: 1px solid blueviolet;
+    padding: 10px;
+    min-height: 160px;
+}
+
+img{
+    height: 100px;
+    width: 100px;
+}
+
+button{
+    padding-bottom: 16px;
+}

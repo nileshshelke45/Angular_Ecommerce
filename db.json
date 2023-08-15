@@ -1,0 +1,104 @@
+{
+  "seller": [
+    {
+      "name": "Nilesh Shelke",
+      "password": "Nilesh@123",
+      "email": "nilesh@gmail.com",
+      "id": 1
+    }
+  ],
+  "products": [
+    {
+      "name": "HP ",
+      "price": "80000",
+      "color": "White",
+      "category": "Laptop",
+      "description": "HP Laptop ",
+      "image": "https://uniquec.com/wp-content/uploads/FC0028.png",
+      "id": 1
+    },
+    {
+      "name": "Apple IPhone",
+      "price": "90000",
+      "color": "Grey",
+      "category": "Mobile",
+      "description": "This is Apple Iphone with Latest Features",
+      "image": "https://www.designinfo.in/wp-content/uploads/2023/01/Apple-iPhone-14-Pro-Mobile-Phone-493177786-i-1-1200Wx1200H-485x485-optimized.jpeg",
+      "id": 2
+    },
+    {
+      "name": "Samsung M40",
+      "price": "30000",
+      "color": "Grey",
+      "category": "Mobile",
+      "description": "This is Samsung M40",
+      "image": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-m40-cocktail-orange.jpg",
+      "id": 3
+    },
+    {
+      "name": "Dell",
+      "price": "90000",
+      "color": "Black",
+      "category": "Laptop",
+      "description": "Dell Laptop",
+      "image": "https://cdn1.smartprix.com/rx-iXMi3TNHD-w1200-h1200/XMi3TNHD.jpg",
+      "id": 4
+    },
+    {
+      "name": "Asus",
+      "price": "50000",
+      "color": "White",
+      "category": "Laptop",
+      "description": "Asus Laptop",
+      "image": "https://cdn1.smartprix.com/rx-ibZbe81SL-w1200-h1200/bZbe81SL.jpg",
+      "id": 5
+    },
+    {
+      "name": "Nike Shoes",
+      "price": "5000",
+      "color": "Black",
+      "category": "Shoes",
+      "description": "This is Nike Shoes",
+      "image": "https://assetscdn1.paytm.com/images/catalog/product/F/FO/FOONIKE-MEN-BLASMAR26297F35A5B23/1563346953614_0..jpg?imwidth=540&impolicy=hq",
+      "id": 6
+    },
+    {
+      "name": "boAthead Smarwatch",
+      "price": "3000",
+      "color": "Pink",
+      "category": "Smartwatch",
+      "description": "This is boat Smartwatch",
+      "image": "https://cdn1.smartprix.com/rx-ioDhSqwJH-w1200-h1200/oDhSqwJH.jpg",
+      "id": 7
+    },
+    {
+      "name": "Samsonite Xenon 3",
+      "price": "15,200",
+      "color": "Black",
+      "category": "Backpack",
+      "description": "Samsonite Xenon 3 Large Backpack",
+      "image": "https://m.media-amazon.com/images/I/81-iXwqepHL._SX679_.jpg",
+      "id": 8
+    }
+  ],
+  "users": [
+    {
+      "email": "mahesh@user.com",
+      "name": "Mahesh",
+      "password": "Mahesh@123",
+      "id": 1
+    },
+    {
+      "email": "nilesh@user.com",
+      "name": "Nilesh ",
+      "password": "Nilesh@123",
+      "id": 2
+    },
+    {
+      "email": "rohit@user.com",
+      "name": "Rohit",
+      "password": "Rohit@123",
+      "id": 3
+    }
+  ]
+}

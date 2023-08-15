@@ -1,0 +1,41 @@
+.add-product{
+  text-align: center;
+}
+
+h1{
+  text-align: center;
+  padding-top: 20px;
+  color: blueviolet;
+  font-size: xx-large;
+}
+
+.form-input{
+  height: 35px;
+  margin-bottom: 20px;
+  border: 1px solid blueviolet;
+  padding-left: 15px;
+  cursor: pointer;
+  }
+
+  .add-product-form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: auto;
+  }
+
+  .form-button{
+    border: 1px solid blueviolet;
+    color: blueviolet;
+    cursor: pointer;
+  }
+
+  .p-message{
+    text-align: center;
+    color: green;
+  }
+
+
+
+  
