@@ -1,0 +1,54 @@
+<div *ngIf="!showLogin" class="userSignUp">
+    
+    <form #userSignUp="ngForm" (ngSubmit)="signUpSubmit(userSignUp.value)">
+        <h1>User Sign-up</h1>
+
+        <div class="form-control">
+            <label for="">Email</label>
+            <input type="email" name="email" ngModel placeholder="Enter your Email" #email="ngModel" required email>
+            <p class="invalid-input"><span *ngIf="email.invalid && email.touched">Please Enter Valid Email</span></p>
+        </div>
+
+        <div class="form-control">
+            <label for="">Name</label>
+            <input type="text" name="name" ngModel placeholder="Enter your Name" #name="ngModel" required>
+            <p class="invalid-input"><span *ngIf="name.invalid && name.touched">Please Enter Name</span></p>
+        </div>
+    
+        <div class="form-control">
+            <label for="">Password</label>
+            <input type="password" name="password" ngModel placeholder="Enter your Password" #password="ngModel" required>
+            <p class="invalid-input"><span *ngIf="password.invalid && password.touched">Please Enter Password</span></p>
+        </div>
+    
+        <button type="submit" mat-stroked-button color="primary" [disabled]="userSignUp.invalid">Sign Up</button>
+        <p>Already Have Account ? <a class="auth-toggle-link" (click)="openLogin()">Click here to Login</a></p>
+    </form>
+</div>
+
+                    
+                    <!--For User Login-->
+
+<div *ngIf="showLogin" class="userLogin">
+
+    <form #userLogin="ngForm" (ngSubmit)="loginSubmit(userLogin.value)">
+        <p class="error">{{invalidUserDetails}}</p>
+        <h1>User Login</h1>
+       
+        
+    <div class="form-control">
+        <label for="">Email</label>
+        <input type="email" name="email" ngModel placeholder="Enter your Email" #email="ngModel" required email>
+        <p class="invalid-input"><span *ngIf="email.invalid && email.touched">Please Enter Valid Email</span></p>
+    </div>
+
+    <div class="form-control">
+        <label for="">Password</label>
+        <input type="password" name="password" ngModel placeholder="Enter your Password" #password="ngModel" required>
+        <p class="invalid-input"><span *ngIf="password.invalid && password.touched">Please Enter Password</span></p>
+    </div>
+
+    <button type="submit" mat-stroked-button color="primary" [disabled]="userLogin.invalid">Login</button>
+    <p>Don't Have Account ? <a class="auth-toggle-link" (click)="openSignUp()">Click here to Sign-Up</a></p>
+    </form>
+</div>
