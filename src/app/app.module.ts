@@ -19,6 +19,16 @@ import { SellerUpdateProductComponent } from './seller-update-product/seller-upd
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { UserComponent } from './user/user.component';
+import { MaterialUiComponent } from './material-ui/material-ui.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { MatStepperModule } from '@angular/material/stepper';
+import { AgGridComponent } from './ag-grid/ag-grid.component';
+import { AgGridModule } from 'ag-grid-angular';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +40,8 @@ import { UserComponent } from './user/user.component';
     SellerUpdateProductComponent,
     ProductDetailsComponent,
     UserComponent,
+    MaterialUiComponent,
+    AgGridComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +53,14 @@ import { UserComponent } from './user/user.component';
     MatButtonModule,
     HttpClientModule,
     NgbModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatStepperModule,
+    AgGridModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

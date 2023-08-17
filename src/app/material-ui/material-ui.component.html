@@ -1,0 +1,91 @@
+<div class="Input">                                     <!-- Input -->
+    <h2>Material Input</h2>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Ex. Pizza" value="">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
+  </form>
+</div>
+<br/><br/>
+
+
+<div class="Stepper">                                   <!-- Stepper -->
+    <h2>Stepper</h2>
+    <mat-horizontal-stepper labelPosition="bottom">
+      <mat-step>
+        <form>
+          <ng-template matStepLabel>
+            <p>Profile</p>
+            <mat-icon>person</mat-icon>
+          </ng-template>
+        </form>
+        <div>
+          <h1>Content for Step 1</h1>
+          <button matStepperNext mat-button>Next</button>
+        </div>
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>
+          <p>Address</p>
+          <mat-icon>address</mat-icon>
+        </ng-template>
+        <div>
+          <h1>Content for Step 2</h1>
+          <button matStepperPrevious mat-button>Previous</button>
+          <button matStepperNext mat-button>Next</button>
+        </div>
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>
+          <p>Done</p>
+          <mat-icon>done</mat-icon>
+        </ng-template>
+        <div>
+          <h1>Content for Step 3</h1>
+          <button matStepperPrevious mat-button>Previous</button>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+</div>
+<br/><br/>
+
+
+<div class="select">                                <!-- Select -->
+  <h2>Select</h2>
+  <mat-form-field>
+    <mat-select [(value)]="selectValue">
+      <mat-option *ngFor="let item of players" [value]="item">{{item}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  {{ selectValue }}
+</div>
+<br/><br/>
+
+
+<div class="checkbox">                              <!-- Checkbox -->
+  <h2>Checkbox</h2>
+  <mat-checkbox color="primary">Like</mat-checkbox><br/>
+  <mat-checkbox color="warn">Share</mat-checkbox><br/>
+  <mat-checkbox labelPosition="before">Follow</mat-checkbox><br/>
+  <mat-checkbox labelPosition="before" color="primary">Subscribe</mat-checkbox>
+</div>
+<br/><br/>
+
+
+<div class="radio">                               <!-- Radio Button -->
+  <h2>Radio Button</h2>
+  <label>Pick your favorite season</label>
+  <br/><br/>
+  <mat-radio-group [(ngModel)]="favoriteSeason" class="example-radio-group">
+    <mat-radio-button *ngFor="let season of seasons" class="example-radio-button" [value]="season">{{season}}</mat-radio-button>
+  </mat-radio-group>
+  Your favourite season is : {{favoriteSeason}}
+</div>

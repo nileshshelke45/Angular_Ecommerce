@@ -10,22 +10,22 @@ import { Product } from '../data-types';
 })
 export class ProductDetailsComponent {
 
-  productData: undefined | Product        // To display Product details on HTML
-  
-  constructor(private activateRoute: ActivatedRoute, private product: ProductService){}   // For getting productId
+  constructor(private activateRoute: ActivatedRoute, private product: ProductService){}  // For getting productId
 
+  productData: undefined | Product        // To display Product details on HTML
+
+  productQuantity:number = 1;               // For Product Quantity
+  
   ngOnInit(){                                            // For getting productId
     let productId = this.activateRoute.snapshot.paramMap.get('productId');
     console.log(productId);
-    productId && this.product.getProduct(productId).subscribe((result)=>{
+    productId && this.product.getProduct(productId).subscribe((result)=>{ // getProduct API for Product details
       console.log(result)
-      this.productData=result;
+      this.productData=result; // To display Product details on HTML
     })
   }
 
-  productQuantity:number = 1;               // For Product Quantity
-
-  handleQuantity(value:string){             // For Product Quantity
+  handleQuantity(value:string){             // For Product Quantity(On Click)
     if(this.productQuantity<20 && value==='plus'){
       this.productQuantity+=1;
     }

@@ -11,17 +11,17 @@ export class HomeComponent {
 
   constructor(private product: ProductService){}  // To Call API
 
-  popularProducts: undefined | Product[]
+  popularProducts: undefined | Product[]      // For Popular Products data
 
-  trendyProducts: undefined | Product[]
+  trendyProducts: undefined | Product[]       // For Trendy Products data
 
-  ngOnInit(){                 // To Call API to display Popular Products
-    this.product.popularProducts().subscribe((data)=>{
+  ngOnInit(){                
+    this.product.popularProducts().subscribe((data)=>{  // Call popularProducts API to display Popular Products
       console.log(data);
-      this.popularProducts=data;
+      this.popularProducts=data; // add data in trendyProducts
     });
-    this.product.trendyProducts().subscribe((data)=>{     // Call API to display Trendy Products
-      this.trendyProducts=data;
+    this.product.trendyProducts().subscribe((data)=>{  // Call trendyProducts API to display Trendy Products
+      this.trendyProducts=data;  // add data in trendyProducts
     });
   }
 

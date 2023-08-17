@@ -5,16 +5,22 @@
       "password": "Nilesh@123",
       "email": "nilesh@gmail.com",
       "id": 1
+    },
+    {
+      "email": "mahesh@gmail.com",
+      "name": "Mahesh Shelke",
+      "password": "Mahesh@123",
+      "id": 2
     }
   ],
   "products": [
     {
-      "name": "HP ",
+      "name": "HP Laptop",
       "price": "80000",
       "color": "White",
       "category": "Laptop",
-      "description": "HP Laptop ",
-      "image": "https://uniquec.com/wp-content/uploads/FC0028.png",
+      "description": "This is HP Laptop",
+      "image": "https://www.notebookcheck.net/fileadmin/Notebooks/HP/15s-fq1556ng/HP_15s_fq_teaser.png",
       "id": 1
     },
     {

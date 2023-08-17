@@ -34,4 +34,10 @@
   .p-message{
     color: green;
   }
+
+  .invalid-input-form{               
+    color: red;
+    text-align: left;
+    margin-top: -15px;
+}
   

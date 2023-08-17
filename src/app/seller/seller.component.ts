@@ -12,18 +12,18 @@ export class SellerComponent {
 
   constructor(private seller: SellerService, private router:Router) { } // To call Service
 
-  showLogin=false;
+  showLogin=false;    // Toggle between Sign Up and Login
   authError:string = '';            // For Email or Password Incorrect
 
-  ngOnInit():void {
+  ngOnInit():void {               // In Case of Refresh Page stay in particular User Page
     this.seller.reloadSeller()
   }
 
-  signUp(data:SignUp){                                // For OnSubmit button Click
+  signUp(data:SignUp){                                // For OnSubmit button Click and Call userSignUp API From Seller Service
      this.seller.userSignUp(data)
   }
 
-  login(data:SignUp){                                // For OnSubmit button Click
+  login(data:SignUp){                                // For OnSubmit button Click and Call userLogin API From Seller Service
     this.seller.userLogin(data)
     this.seller.isLoginError.subscribe((isError)=>{
       if(isError){
@@ -32,11 +32,11 @@ export class SellerComponent {
     })
  }
 
-  openLogin(){
+  openLogin(){                  // Toggle between Sign Up and Login
     this.showLogin=true;
   }
 
-  openSignUp(){
+  openSignUp(){                 // Toggle between Sign Up and Login
     this.showLogin=false;
   }
 

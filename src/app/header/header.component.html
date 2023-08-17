@@ -5,23 +5,24 @@
     <h1 class="example-spacer"><a routerLink="/">E-com</a></h1>
   
     <div [ngSwitch]="menuType">
-      <div *ngSwitchCase="'default'">
+      <div *ngSwitchCase="'default'">    <!-- Menu For Default-->
         <button routerLink="" mat-button>Home</button>
         <button routerLink="seller" mat-button>Seller</button>
         <button routerLink="users" mat-button>Login/Sign-up</button> 
+        <button routerLink="material-ui" mat-button>Material UI</button>
+        <button routerLink="ag-grid" mat-button>AG-Grid</button>
       </div>
 
-      <div *ngSwitchCase="'user'">
+      <div *ngSwitchCase="'user'">        <!-- Menu For User-->
         <button routerLink="" mat-button>Home</button>
-        <!-- <button routerLink="seller" mat-button>Seller</button> -->
         <button routerLink="" mat-button>{{userName | titlecase}}</button>
         <button (click)="logoutUser()" routerLink="" mat-button>Logout</button>
       </div>
 
-      <div *ngSwitchCase="'seller'">
+      <div *ngSwitchCase="'seller'">        <!-- Menu For Seller-->
         <button routerLink="seller-add-product" mat-button>Add Product</button>
         <button routerLink="seller-home" mat-button>List</button>
-        <button routerLink="" mat-button>{{sellerName | titlecase}}</button>
+        <button mat-button>{{sellerName | titlecase}}</button>
         <button (click)="logoutSeller()" routerLink="" mat-button>Logout</button>
       </div>
     </div>

@@ -9,8 +9,12 @@ import { Product } from '../data-types';
 })
 export class SellerAddProductComponent {
 
+  constructor(private product: ProductService){}     
+  
+  addProductMessage: string | undefined;          // Product Added Message
+
   productSubmit(data:Product){
-    this.product.addProduct(data).subscribe((result)=>{
+    this.product.addProduct(data).subscribe((result)=>{   // Call addProduct API
       console.log(result);
       if(result){
         this.addProductMessage="Product is Successfully added";
@@ -19,8 +23,5 @@ export class SellerAddProductComponent {
     });
   }
 
-  constructor(private product: ProductService){}
-
-  addProductMessage: string | undefined;
 
 }
