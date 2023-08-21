@@ -2,13 +2,37 @@
     <h1>Update Product</h1>
     <p class="p-message">{{productMessage}}</p>
     
-    <form #updateProduct="ngForm" (ngSubmit)="updateSubmit(updateProduct.value)" class="update-product-form">
-            <input class="form-input" name="name" ngModel="{{productData?.name}}" placeholder="Enter Product Name">
-            <input class="form-input" name="price" ngModel="{{productData?.price}}" placeholder="Enter Product Price">
-            <input class="form-input" name="color" ngModel="{{productData?.color}}" placeholder="Enter Product Color">
-            <input class="form-input" name="category" ngModel="{{productData?.category}}" placeholder="Enter Product Category">
-            <textarea class="form-input" name="description" ngModel="{{productData?.description}}" placeholder="Enter Product Description"></textarea>
-            <input class="form-input" name="image" ngModel="{{productData?.image}}" placeholder="Enter Product Image URL">
-            <button type="submit" class="form-button" mat-stroked-button color="warn">Update Product</button>
+    <form #updateProduct="ngForm" (ngSubmit)="updateSubmit(updateProduct.value)">
+            <div class="update-product-form">
+                <input class="form-input" name="name" ngModel="{{productData?.name}}" placeholder="Enter Product Name" #name="ngModel" required>
+                <p class="invalid-input-form"><span *ngIf="name.invalid && name.touched">Please Enter Name</span></p>
+            </div>
+
+            <div class="update-product-form">
+                <input class="form-input" name="price" ngModel="{{productData?.price}}" placeholder="Enter Product Price" #price="ngModel" required>
+                <p class="invalid-input-form"><span *ngIf="price.invalid && price.touched">Please Enter Price</span></p>
+            </div>
+
+            <div class="update-product-form">
+                <input class="form-input" name="color" ngModel="{{productData?.color}}" placeholder="Enter Product Color" #color="ngModel" required>
+                <p class="invalid-input-form"><span *ngIf="color.invalid && color.touched">Please Enter Color</span></p>
+            </div>
+
+            <div class="update-product-form">
+                <input class="form-input" name="category" ngModel="{{productData?.category}}" placeholder="Enter Product Category" #category="ngModel" required>
+                <p class="invalid-input-form"><span *ngIf="category.invalid && category.touched">Please Enter Category</span></p>
+            </div>
+
+            <div class="update-product-form">
+                <textarea class="form-input" name="description" ngModel="{{productData?.description}}" placeholder="Enter Product Description" #description="ngModel" required></textarea>
+                <p class="invalid-input-form"><span *ngIf="description.invalid && description.touched">Please Enter Description</span></p>
+            </div>
+
+            <div class="update-product-form">
+                <input class="form-input" name="image" ngModel="{{productData?.image}}" placeholder="Enter Product Image URL" #image="ngModel">
+                <p class="invalid-input-form"><span *ngIf="image.invalid && image.touched">Please Enter Image URL</span></p>
+            </div>
+            
+            <button type="submit" [disabled]="updateProduct.invalid" class="form-button" mat-stroked-button color="warn">Update Product</button>
     </form>
 </div>

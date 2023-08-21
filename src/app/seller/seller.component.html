@@ -50,7 +50,7 @@
         <p class="invalid-input"><span *ngIf="password.invalid && password.touched">Please Enter Password</span></p>
     </div>
 
-    <button class="dis" type="submit" mat-stroked-button color="primary" [disabled]="sellerLogin.invalid">Login</button>
+    <button type="submit" mat-stroked-button color="primary" [disabled]="sellerLogin.invalid">Login</button>
     <p>Don't Have Account ? <a class="auth-toggle-link" (click)="openSignUp()">Click here to Sign-Up</a></p>
     </form>
 </div>

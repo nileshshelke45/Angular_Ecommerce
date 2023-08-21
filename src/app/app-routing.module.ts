@@ -8,6 +8,8 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { UserComponent } from './user/user.component';
+import { MaterialUiComponent } from './material-ui/material-ui.component';
+import { AgGridComponent } from './ag-grid/ag-grid.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -16,7 +18,9 @@ const routes: Routes = [
   {path:'seller-add-product', component: SellerAddProductComponent, canActivate:[authGuard]},
   {path:'seller-update-product/:id', component: SellerUpdateProductComponent, canActivate:[authGuard]},
   {path:'product-details/:productId', component: ProductDetailsComponent},
-  {path:'users', component: UserComponent}
+  {path:'users', component: UserComponent},
+  {path:'material-ui', component: MaterialUiComponent},
+  {path:'ag-grid', component: AgGridComponent}
 ];
 
 @NgModule({

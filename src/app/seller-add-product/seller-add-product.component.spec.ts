@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SellerAddProductComponent } from './seller-add-product.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { FormsModule } from '@angular/forms';
 
 describe('SellerAddProductComponent', () => {
   let component: SellerAddProductComponent;
@@ -8,7 +10,8 @@ describe('SellerAddProductComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SellerAddProductComponent]
+      declarations: [SellerAddProductComponent],
+      imports: [HttpClientTestingModule, FormsModule]      // For Testing
     });
     fixture = TestBed.createComponent(SellerAddProductComponent);
     component = fixture.componentInstance;
@@ -18,4 +21,5 @@ describe('SellerAddProductComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 });

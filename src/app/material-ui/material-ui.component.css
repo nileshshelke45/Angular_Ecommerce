@@ -1,0 +1,26 @@
+.example-form {                             /* Input */
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  .example-full-width {
+    width: 100%;
+  }
+
+
+
+.select{                                   /* Select */
+  width: 200px;
+}
+
+
+
+.example-radio-button {                    /* Radio Button */
+  margin: 5px;
+}
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+  

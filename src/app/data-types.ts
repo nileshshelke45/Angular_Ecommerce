@@ -17,5 +17,13 @@ export interface Product {
     description: string,
     image: string,
     id: number,
-    quantity: undefined | number
+}
+
+export interface AgDataTypes {
+    image: string,
+    name: string,
+    price: number,
+    color: string,
+    category: string,
+    description: string
 }

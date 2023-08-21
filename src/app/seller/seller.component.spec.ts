@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SellerComponent } from './seller.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { FormsModule } from '@angular/forms';
 
 describe('SellerComponent', () => {
   let component: SellerComponent;
@@ -8,7 +10,8 @@ describe('SellerComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SellerComponent]
+      declarations: [SellerComponent],
+      imports: [HttpClientTestingModule, FormsModule]      // For Testing
     });
     fixture = TestBed.createComponent(SellerComponent);
     component = fixture.componentInstance;

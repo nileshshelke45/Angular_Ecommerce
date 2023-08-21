@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
+import { AgGridComponent } from './ag-grid.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('AgGridComponent', () => {
+  let component: AgGridComponent;
+  let fixture: ComponentFixture<AgGridComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HomeComponent],
-      imports: [HttpClientTestingModule]    // For Testing
+      declarations: [AgGridComponent],
+      imports: [HttpClientTestingModule]        // For Testing
     });
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(AgGridComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -20,5 +20,4 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
 });

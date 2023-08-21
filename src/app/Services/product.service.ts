@@ -8,16 +8,16 @@ import { Product } from '../data-types';
 export class ProductService {
 
 
-  constructor(private http: HttpClient) { }             // To call addProduct API
-  addProduct(data:Product){
+  constructor(private http: HttpClient) { }             // To call API
+  addProduct(data:Product){           // addProduct API
    return this.http.post('http://localhost:3000/products',data);
   }
 
-  productList(){                                           // Call this in Seller-Home Component
+  productList(){                  // productList API Call this in Seller-Home Component
     return this.http.get<Product[]>('http://localhost:3000/products');
   }
 
-  deleteProduct(id:number){             // For delete the Product
+  deleteProduct(id:number){             // deleteProduct API
    return this.http.delete(`http://localhost:3000/products/${id}`); 
   }
 
@@ -26,15 +26,14 @@ export class ProductService {
   }
 
   updateProduct(product:Product){    // Update Product API for Update Product)
-    console.log(product)           
     return this.http.put<Product>(`http://localhost:3000/products/${product.id}`, product);
   }
 
-  popularProducts(){          // API for First 3 or 4 Popular Products
+  popularProducts(){          // popularProducts API for First 3 or 4 Popular Products in Home Component Carousel
     return this.http.get<Product[]>('http://localhost:3000/products?_limit=3'); 
   }
 
-  trendyProducts(){             // API for Trendy Products in Home Component
+  trendyProducts(){             // trendyProducts API for Trendy Products in Home Component
     return this.http.get<Product[]>('http://localhost:3000/products?_limit=8');
   }
 
