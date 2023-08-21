@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -43,6 +41,7 @@ import { MatRadioModule } from '@angular/material/radio';
     MaterialUiComponent,
     AgGridComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -62,7 +61,21 @@ import { MatRadioModule } from '@angular/material/radio';
     MatCheckboxModule,
     MatRadioModule,
   ],
+  exports: [                      // For Testing to use Across all 
+    HeaderComponent,
+      HomeComponent,
+      SellerComponent,
+      SellerHomeComponent,
+      SellerAddProductComponent,
+      SellerUpdateProductComponent,
+      ProductDetailsComponent,
+      UserComponent,
+      MaterialUiComponent,
+      AgGridComponent,
+  ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
