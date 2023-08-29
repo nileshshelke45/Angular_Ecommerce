@@ -9,7 +9,6 @@ import { SellerUpdateProductComponent } from './seller-update-product/seller-upd
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { UserComponent } from './user/user.component';
 import { MaterialUiComponent } from './material-ui/material-ui.component';
-import { AgGridComponent } from './ag-grid/ag-grid.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -20,7 +19,6 @@ const routes: Routes = [
   {path:'product-details/:productId', component: ProductDetailsComponent},
   {path:'users', component: UserComponent},
   {path:'material-ui', component: MaterialUiComponent},
-  {path:'ag-grid', component: AgGridComponent}
 ];
 
 @NgModule({
