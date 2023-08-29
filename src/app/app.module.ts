@@ -22,7 +22,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
-import { AgGridComponent } from './ag-grid/ag-grid.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -39,7 +38,6 @@ import { MatRadioModule } from '@angular/material/radio';
     ProductDetailsComponent,
     UserComponent,
     MaterialUiComponent,
-    AgGridComponent,
   ],
 
   imports: [
@@ -71,7 +69,6 @@ import { MatRadioModule } from '@angular/material/radio';
       ProductDetailsComponent,
       UserComponent,
       MaterialUiComponent,
-      AgGridComponent,
   ],
 
   providers: [],
